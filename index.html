@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="flex flex-col  justify-center h-screen ">
+
+ 
+    <div class="navbar bg-primary absolute top-0 p-0 pr-3">
+        <div class="navbar text-primary-content">
+            <button class="btn btn-ghost text-2xl text-white"> Blogging Site</button>
+            <button class="mx-[1700px]  bg-white text-black p-3 text-2xl rounded-lg" id="logout">logout</button>
+        </div>
+  
+      
+            
+        </div>
+    </div>
+
+    <main class="">
+        <section class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-bold mb-4">Post Blog</h2>
+            <form id="newBlogForm" class="space-y-4">
+                <div class="form-group">
+                    <label for="title" class="block text-sm font-medium text-700">Title:</label>
+                    <input type="text" id="title" name="title"
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm  sm:text-sm"
+                        required minlength="5" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="body" class="block text-sm font-medium text-gray-700">Body:</label>
+                    <textarea id="body" name="body"
+                        class="mt-1 block w-full border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                         minlength="100" maxlength="3000"></textarea>
+                </div>
+
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Post</button>
+            </form>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+        
+            <div id="blogsContainer" ></div>
+        </section>
+    </main>
+
+
+
+    <script type="module" src="./scripts/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+
+</html>
